@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "36aSOgZEZ8TBJSdWqlTKQdeHbbIucFBfLm18TUYPXeQx8jt1YtLZimGZ3HWIeG70lyApsVdrZ/RJ0u0WP08c/w==",
+  "dgSpecHash": "EwL+bDvNDaEm1d8RqNQI0LGZk9Eyh1MExB4SO8iy7ulOcs/qe4/kwFBM7UYVsIttVzsVawAOcxQ/SQlmXnHswQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\lucas\\Documents\\www\\GeekShooping\\GeekShooping\\GeekShooping.ProductAPI\\GeekShooping.ProductAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\lucas\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.12\\microsoft.aspnetcore.authentication.jwtbearer.6.0.12.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
