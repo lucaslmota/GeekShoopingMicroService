@@ -26,6 +26,7 @@ namespace GeekShoopin.Web.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> ProductCreate(ProductModel productModel)
         {
@@ -50,6 +51,7 @@ namespace GeekShoopin.Web.Controllers
             return NotFound();
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> ProductUpdate(ProductModel productModel)
         {
@@ -71,6 +73,7 @@ namespace GeekShoopin.Web.Controllers
             return NotFound();
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> ProductDelete(ProductModel model)
         {
