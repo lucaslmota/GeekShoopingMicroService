@@ -1,5 +1,6 @@
 ﻿using GeekShoopin.Web.Models;
 using GeekShoopin.Web.Services.IServices;
+using GeekShoopin.Web.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -66,6 +67,7 @@ namespace GeekShoopin.Web.Controllers
             return View(productModel);
         }
 
+        [Authorize]
         public async Task<IActionResult> ProductDelete(int id)
         {
             var model = await _productService.FindById(id);
@@ -73,8 +75,8 @@ namespace GeekShoopin.Web.Controllers
             return NotFound();
         }
 
-        [Authorize]
         [HttpPost]
+        [Authorize(Roles = Role.Admin)]
         public async Task<IActionResult> ProductDelete(ProductModel model)
         {
             var response = await _productService.Delete(model.Id);
