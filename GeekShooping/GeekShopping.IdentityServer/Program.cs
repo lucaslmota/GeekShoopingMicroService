@@ -4,6 +4,7 @@ using GeekShopping.IdentityServer.Model;
 using GeekShopping.IdentityServer.Model.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,9 +24,13 @@ var build = builder.Services.AddIdentityServer(options =>
     options.Events.RaiseFailureEvents = true;
     options.Events.RaiseSuccessEvents = true;
     options.EmitStaticAudienceClaim = true;
-}).AddInMemoryIdentityResources(IdentityConfiguration.IdentityResources).AddInMemoryApiScopes(IdentityConfiguration.ApiScopes).AddInMemoryClients(IdentityConfiguration.Clients).AddAspNetIdentity<ApplicationUser>();
+}).AddInMemoryIdentityResources(
+    IdentityConfiguration.IdentityResources)
+.AddInMemoryApiScopes(IdentityConfiguration.ApiScopes)
+.AddInMemoryClients(IdentityConfiguration.Clients)
+.AddAspNetIdentity<ApplicationUser>();
 
-build.Services.AddScoped<IDbInitializer, DbInitializer>();
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 
 build.AddDeveloperSigningCredential();
 
@@ -46,11 +51,9 @@ app.UseRouting();
 app.UseIdentityServer();
 
 app.UseAuthorization();
-
+dbInitializeService.Initializer();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-dbInitializeService.Initializer();
 
 app.Run();

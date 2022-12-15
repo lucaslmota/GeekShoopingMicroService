@@ -42,7 +42,7 @@
           "dependencies": {
             "Duende.IdentityServer.AspNetIdentity": {
               "target": "Package",
-              "version": "[6.2.0, )"
+              "version": "[5.2.2, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -61,6 +61,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.Owin.Security.OpenIdConnect": {
+              "target": "Package",
+              "version": "[4.2.2, )"
             }
           },
           "imports": [
